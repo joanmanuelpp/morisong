@@ -42,6 +42,16 @@
     background:linear-gradient(180deg, var(--sewer) 0%, var(--sewer-deep) 100%);
     position:relative;
   }
+  .header-avatar{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--moss-bright);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+    margin: 0 auto 12px auto;
+    display: block;
+  }
   .kicker{
     font-size:0.78rem;
     letter-spacing:0.04em;
@@ -251,6 +261,8 @@
 <body>
 
 <header>
+  <!-- Foto de Morisong en el encabezado -->
+  <img src="morisong.jfif" alt="Morisong" class="header-avatar">
   <p class="kicker">FICHA DE REFERENCIA RÁPIDA</p>
   <h1>Morisong</h1>
   <p class="subtitle">Brujo <b>nivel 2</b> · Goblin Colilarga · Bagaje Bendecido · Patrón: Bruja del Mosquito · Familiar: Sangre</p>
@@ -520,7 +532,7 @@
         <tr><th>Conjuro</th><th>Acc.</th><th>Cómo explicarlo en mesa</th></tr>
         <tr><td>Guía</td><td>1</td><td>Antes de una tirada de habilidad o salvación (tuya o de un aliado), das +1 de estado a esa tirada específica. Viene de tu trasfondo Bendecido, no cuenta como conjuro de Brujo.</td></tr>
       </table>
-      <p class="note">No gasta espacio de conjuro ni punto de foco — es totalmente aparte. Pregunta a tu GM la frecuencia exacta (normalmente es limitada, no ilimitada).</p>
+      <p class="note">No gasta espacio de conjuro ni punto de foco — ergo es totalmente aparte. Pregunta a tu GM la frecuencia exacta (normalmente es limitada, no ilimitada).</p>
     </div>
 
   </section>
@@ -617,15 +629,15 @@
 
   </section>
 
- <!-- ===================== SANGRE ===================== -->
+  <!-- ===================== SANGRE ===================== -->
   <section class="panel" id="sangre">
     
-    <!-- Imagen de Sangre Arriba y más Grande -->
+    <!-- Imagen de Sangre Arriba y Grande -->
     <div style="width: 100%; max-width: 1400px; margin: 0 auto 20px auto; text-align: center; padding: 0;">
       <img src="sangre.jfif" alt="Sangre - Familiar de Morisong" style="width: 100%; max-width: 650px; height: auto; border-radius: var(--radius); border: 1px solid var(--line); display: block; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.7);">
     </div>
 
-    <!-- Información y Estadísticas Abajo -->
+    <!-- Información, Estadísticas y Guía de Acciones Abajo -->
     <div class="card">
       <h2>Sangre <span class="n">Familiar / Jaguar Zombi & Escarabajo</span></h2>
       <table class="rows">
@@ -643,7 +655,6 @@
       </table>
     </div>
 
-    <!-- Guía detallada de acciones de Sangre -->
     <div class="card">
       <h2>Sangre <span class="n">familiar — escarabajo (guía de acciones)</span></h2>
       <p class="note" style="border-color:var(--rust); margin:0 0 12px;">Sangre es un familiar, no un lanzador de conjuros propio. No prepara ni lanza hechizos por sí misma; tú eres quien lanza la magia y usas a Sangre para apoyo táctico.</p>
