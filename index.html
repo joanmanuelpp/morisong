@@ -231,6 +231,14 @@
     box-shadow:0 0 6px rgba(201,111,63,0.6);
   }
 
+  .divider{
+    text-align:center;
+    color:var(--moss);
+    opacity:0.5;
+    font-size:0.8rem;
+    margin:18px 0 6px;
+  }
+
   footer{
     text-align:center;
     padding:24px 16px 8px;
@@ -256,7 +264,7 @@
   <button data-tab="conjuros">Conjuros</button>
   <button data-tab="equipo">Equipo</button>
   <button data-tab="dotes">Dotes</button>
-  <button data-tab="sangre">Sangre</button>
+  <button data-tab="familiar">Sangre</button>
   <button data-tab="patron">Patrón</button>
   <button data-tab="rol">Personalidad</button>
 </nav>
@@ -265,6 +273,7 @@
 
   <!-- ===================== COMBATE ===================== -->
   <section class="panel active" id="combate">
+
     <div class="card">
       <h2>Combate Rápido</h2>
       <div class="stat-grid">
@@ -279,18 +288,60 @@
         <div class="stat"><div class="v">+3</div><div class="l">Bastón (1d6 P)</div></div>
       </div>
     </div>
+
     <div class="card">
       <h2>Dotes y Rasgos Útiles en Combate</h2>
       <table class="rows">
         <tr><td><b>Visión en la oscuridad</b></td><td>Ves con normalidad en oscuridad total, sin necesidad de luz.</td></tr>
-        <tr><td><b>Ocultar Conjuro</b></td><td>1 acción, antes de lanzar conjuro, oculta runas y chispas visuales.</td></tr>
+        <tr><td><b>Ocultar Conjuro</b></td><td>1 acción, antes de lanzar conjuro, gana rasgo Sutil: oculta runas y chispas visuales (no oculta el efecto final).</td></tr>
         <tr><td><b>Trepador en Combate</b></td><td>No estás desprevenido mientras trepas y puedes trepar con una mano ocupada.</td></tr>
+        <tr><td><b>Muy Sigiloso</b></td><td>Al Sigilo te puedes mover hasta tu velocidad completa; mantienes cobertura o ocultamiento al terminar.</td></tr>
+        <tr><td><b>Familiar del Corazón del Enjambre</b></td><td>Al lanzar o mantener un embrujo, insectos rodean a Sangre y dan Ocultación a ti o a un aliado en su espacio.</td></tr>
       </table>
     </div>
+
+    <div class="card">
+      <h2>Trucos <span class="n">ilimitados · CD 18</span></h2>
+      <table class="rows">
+        <tr><th>Truco</th><th>Acc.</th><th>¿A cuántas personas afecta?</th><th>Descripción completa / Mesa</th></tr>
+        <tr><td><b>Arco eléctrico</b></td><td class="mod">2 acc.</td><td>Hasta 2 objetivos cercanos</td><td>Alcance 30 pies. Ataca hasta a 2 objetivos cercanos. Salvación básica de <b>Reflejos vs CD 18</b>: hace 2d4 de daño eléctrico.</td></tr>
+        <tr><td><b>Explosión cáustica</b></td><td class="mod">2 acc.</td><td>Área (todos en ráfaga de 5 pies)</td><td>Ráfaga de 5 pies (alcance 30). Todos los atrapados tiran salvación básica de <b>Reflejos vs CD 18</b>: 1d8 de daño ácido (en crítico fallido deja 1 persistente).</td></tr>
+        <tr><td><b>Ignición</b></td><td class="mod">2 acc.</td><td>1 objetivo</td><td>Alcance 30 pies. Haces una <b>Tirada de Ataque de Conjuro (+8)</b> contra la CA del objetivo: hace 2d4 de fuego (doble + 1d4 persistente en crítico).</td></tr>
+        <tr><td><b>Enredadera</b></td><td class="mod">2 acc.</td><td>1 objetivo</td><td>Haces una <b>Tirada de Ataque de Conjuro (+8)</b> contra la CA del enemigo. Si impacta, una zarza lo agarra y le reduce la Velocidad.</td></tr>
+        <tr><td><b>Aliento venenoso</b></td><td class="mod">2 acc.</td><td>1 objetivo</td><td>Exhalas veneno a corta distancia. Salvación de <b>Fortaleza vs CD 18</b>: 1d8 de veneno + 2 persistente (la mitad del daño si pasa).</td></tr>
+        <tr><td><b>Comer fuego</b></td><td class="mod">Reacción</td><td>Solo tú (y nube de 5 pies)</td><td>Cuando vas a recibir daño de fuego, ganas Resistencia 5 a fuego. Puedes "eructar" el humo para crear una nube de 5 pies que da ocultación a todos los que estén dentro.</td></tr>
+        <tr><td><b>Proteger compañero</b></td><td class="mod">1 acc.</td><td>1 aliado (Sangre u otro)</td><td>Pensado para Sangre: si tu familiar va a recibir daño, absorbes parte de ese golpe tú en su lugar.</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Conjuros Preparados y Focos <span class="n">Nivel 1</span></h2>
+      <table class="rows">
+        <tr><th>Conjuro / Foco</th><th>Acc.</th><th>Descripción completa / Mesa</th></tr>
+        <tr><td><b>Soplar fuego</b></td><td class="mod">2 acc.</td><td>Cono de 15 pies frente a ti. Todos tiran salvación básica de <b>Reflejos vs CD 18</b>: 2d6 de daño de fuego.</td></tr>
+        <tr><td><b>Bola de nieve</b></td><td class="mod">2 acc.</td><td>Alcance 30 pies, 1 objetivo. Salvación de <b>Reflejos</b>: 2d4 de frío (y reduce Velocidad si falla de forma crítica).</td></tr>
+        <tr><td><b>Forma de peste</b></td><td class="mod">2 acc.</td><td>Te transformas en bicho pequeño (rata, araña) por 10 min. Pierdes ataques normales pero ganas un sigilo altísimo (ideal para infiltración o huida, no para combate directo).</td></tr>
+        <tr><td><b>Mordeduras zumbantes (Foco)</b></td><td class="mod">1 acc.</td><td>Invocas insectos a un enemigo: 1d4 perforante. Salvación de <b>Fortaleza</b>: si falla, queda enfermo.</td></tr>
+        <tr><td><b>Fase familiar (Foco)</b></td><td class="mod">Reacción</td><td>Vuelve a Sangre fantasmal cuando va a recibir un ataque: gana Resistencia 5 a todo daño y es inmune a bonificadores de precisión (como flanqueos) en ese golpe.</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Pócimas, Explosivos y Objetos de Combate</h2>
+      <table class="rows">
+        <tr><th>Objeto</th><th>Uso / Mecánica en Combate</th></tr>
+        <tr><td><b>Fuego alquímico menor</b></td><td>Bomba de respaldo (daño de fuego): Al impactar hace <b>1d8 de daño de fuego + 1 de daño de fuego persistente</b>. Ideal cuando te quedas sin espacios de conjuro.</td></tr>
+        <tr><td><b>Vapor Vejante menor</b></td><td>Bomba inhalada (mental/veneno): Al impactar hace <b>1d6 de daño mental + 1 de salpicadura mental</b>. El objetivo debe superar un tiro plano de <b>CD 5</b> antes de usar acciones con el rasgo <i>concentración</i> (dura hasta su próximo turno, o 1 minuto en golpe crítico).</td></tr>
+        <tr><td><b>Kit de salud (5 usos)</b></td><td>Para curar heridas fuera de combate o en pausas (Medicina +0).</td></tr>
+        <tr><td><b>Galón de cerveza (1 uso)</b></td><td>Para celebrar o ahogar penas en medio del caos.</td></tr>
+      </table>
+    </div>
+
   </section>
 
   <!-- ===================== FICHA ===================== -->
   <section class="panel" id="ficha">
+
     <div class="card">
       <h2>Atributos</h2>
       <div class="stat-grid">
@@ -302,6 +353,39 @@
         <div class="stat"><div class="v">+3</div><div class="l">CAR</div></div>
       </div>
     </div>
+
+    <div class="card">
+      <h2>Combate</h2>
+      <div class="stat-grid">
+        <div class="stat"><div class="v">17</div><div class="l">CA</div></div>
+        <div class="stat"><div class="v">18</div><div class="l">HP máx</div></div>
+        <div class="stat"><div class="v">+4</div><div class="l">Percepción</div></div>
+        <div class="stat"><div class="v">+4</div><div class="l">Fortaleza</div></div>
+        <div class="stat"><div class="v">+6</div><div class="l">Reflejos</div></div>
+        <div class="stat"><div class="v">+6</div><div class="l">Voluntad</div></div>
+        <div class="stat patron"><div class="v">18</div><div class="l">CD Conjuros</div></div>
+        <div class="stat patron"><div class="v">+8</div><div class="l">Ataque Conjuros</div></div>
+        <div class="stat"><div class="v">+3</div><div class="l">Bastón (1d6 P)</div></div>
+      </div>
+      <p class="note">CA corregida a 17 (10 + 2 Des + 4 Comp Entrenado + 1 Objeto) — el PDF traía la competencia de armadura en 0 por una casilla sin marcar. El resto de la hoja (salvaciones, perception, CD de clase, PG y habilidades entrenadas) revisado y cuadra correctamente.</p>
+    </div>
+
+    <div class="card">
+      <h2>Recursos</h2>
+      <div class="stat-grid">
+        <div class="stat"><div class="v">2</div><div class="l">Puntos de Foco</div></div>
+      </div>
+      <div style="margin-top:14px;">
+        <div style="color:var(--moss-bright); font-size:0.85rem; margin-bottom:2px;">Puntos de Héroe</div>
+        <div class="pip-row">
+          <span class="pip filled"></span>
+          <span class="pip"></span>
+          <span class="pip"></span>
+        </div>
+      </div>
+      <p class="note">Ganas 1 al inicio de cada sesión (y más si el GM te da uno). Gasta 1 para repetir una tirada. Gasta TODOS los que tengas para evitar morir cuando llegas a Moribundo 4. Máximo 3 — avísame cuando ganes o gastes uno y te actualizo los círculos.</p>
+    </div>
+
     <div class="card">
       <h2>Datos generales</h2>
       <table class="rows">
@@ -309,65 +393,234 @@
         <tr><td>Idiomas</td><td>Común, Goblin, Gnomish, Jotun, Orcish</td></tr>
         <tr><td>Herencia</td><td>Goblin Colilarga</td></tr>
         <tr><td>Patrón</td><td>Bruja del Mosquito</td></tr>
+        <tr><td>Sentidos</td><td>Visión en la oscuridad</td></tr>
+        <tr><td>Tamaño / Altura</td><td>Pequeño · 1.30 m</td></tr>
+        <tr><td>Carga (Bulk)</td><td><span class="mod">4.4 / 5</span> (impedido en 5+, máx 10)</td></tr>
+        <tr><td>Dinero</td><td>2 PO</td></tr>
       </table>
     </div>
+
   </section>
 
   <!-- ===================== HABILIDADES ===================== -->
   <section class="panel" id="habilidades">
+
     <div class="card">
       <h2>Entrenadas <span class="n">competencia aplicada</span></h2>
       <table class="rows">
         <tr><th>Habilidad</th><th>Mod</th><th>Uso principal</th></tr>
         <tr><td>Ocultismo</td><td class="mod">+8</td><td>CD de conjuros, identificar magia, tu patrón</td></tr>
-        <tr><td>Arcanos</td><td class="mod">+8</td><td>Recall Knowledge sobre magia y criaturas</td></tr>
-        <tr><td>Sociedad</td><td class="mod">+8</td><td>Conocimiento urbano</td></tr>
-        <tr><td>Intimidación</td><td class="mod">+7</td><td>Demoralize</td></tr>
-        <tr><td>Sigilo</td><td class="mod">+6</td><td>Esconderte</td></tr>
+        <tr><td>Arcanos</td><td class="mod">+8</td><td>Recall Knowledge sobre magia y criaturas mágicas</td></tr>
+        <tr><td>Sociedad</td><td class="mod">+8</td><td>Nueva — conocimiento urbano, moverte entre no-goblins</td></tr>
+        <tr><td>Saber: Deidad Patrona</td><td class="mod">+8</td><td>Nueva — todo sobre tu patrón y su culto</td></tr>
+        <tr><td>Intimidación</td><td class="mod">+7</td><td>Demoralize — tu CAR compensa tu pinta de goblin</td></tr>
+        <tr><td>Latrocinio</td><td class="mod">+6</td><td>Robar, abrir cerraduras (kit de escalada a mano)</td></tr>
+        <tr><td>Sigilo</td><td class="mod">+6</td><td>Esconderte — clave en un grupo sin mucha CA</td></tr>
+        <tr><td>Artesanía</td><td class="mod">+4</td><td>Reparar y fabricar objetos simples</td></tr>
+        <tr><td>Naturaleza</td><td class="mod">+4</td><td>Nueva — identificar criaturas y terreno salvaje</td></tr>
+        <tr><td>Supervivencia</td><td class="mod">+4</td><td>Rastrear, orientarte fuera de las cloacas</td></tr>
+        <tr><td>Diplomacia</td><td class="mod">+3</td><td>Poco entrenada, mejor Intimidación o Engaño</td></tr>
+        <tr><td>Engaño</td><td class="mod">+3</td><td>Mentir, disfrazarte (llevas bigote falso y sombrero)</td></tr>
+        <tr><td>Interpretación</td><td class="mod">+3</td><td>Fingir ser alguien de la superficie</td></tr>
+        <tr><td><b>Atletismo (Escalar)</b></td><td class="mod">+3</td><td><b>Exclusivo para Trepar (+0 FUE +0 Comp +2 Colilarga +1 Kit de escalada)</b></td></tr>
       </table>
+      <p class="note"><b>Nota importante sobre Atletismo:</b> El bonificador de <b>+3</b> aplica únicamente para la acción de <b>Escalar (Climb)</b>. Para cualquier otra maniobra de Atletismo (Empujar, Derribar, Agarrar o Nado), tu bonificador es de <b>+0</b>.</p>
     </div>
+
+    <div class="card">
+      <h2>No entrenadas</h2>
+      <table class="rows">
+        <tr><td>Acrobacias +2</td><td>Medicina +0</td><td>Religión +0</td></tr>
+        <tr><td><b>Atletismo (General)</b> <span class="mod">+0</span></td><td>—</td><td>—</td></tr>
+      </table>
+      <p class="note">CD de clase 18 — subió con el nivel. Sociedad, Ocultismo, Arcanos y Saber: Deidad Patrona son ahora tus mejores apuestas para Recall Knowledge.</p>
+    </div>
+
   </section>
 
   <!-- ===================== CONJUROS ===================== -->
   <section class="panel" id="conjuros">
+
+    <div class="card">
+      <h2>Conjuros preparados <span class="n">3 espacios de nivel 1 — para combate</span></h2>
+      <table class="rows">
+        <tr><th>Conjuro</th><th>Acc.</th><th>Cómo explicarlo en mesa</th></tr>
+        <tr><td>Soplar fuego</td><td>2</td><td>Cono de 15 pies frente a ti. Todos dentro tiran Reflejos básico contra tu CD 18: 2d6 de fuego.</td></tr>
+        <tr><td>Bola de nieve</td><td>2</td><td>Alcance 30 pies, un objetivo. Salvación de Reflejos: 2d4 frío, y si falla crítico también reduce su Velocidad.</td></tr>
+        <tr><td>Forma de peste</td><td>2</td><td>Te transformas en un bicho pequeño (rata, araña) por 10 minutos: pierdes tus ataques normales pero ganas sigilo altísimo — ideal para colarte o escapar, no para pelear.</td></tr>
+      </table>
+      <p class="note">Estos son tus conjuros de combate más fuertes, pero solo tienes 3 usos al día en total (se acaban y no vuelven hasta el día siguiente). Soplar fuego y Bola de nieve son para daño de área/directo; Forma de peste es utilidad pura, resérvala para sigilo o huida.</p>
+    </div>
+
+    <div class="card">
+      <h2>Resumen rápido — Área vs. un objetivo</h2>
+      <table class="rows">
+        <tr><th>De área (afectan varios)</th><th>Detalle</th></tr>
+        <tr><td><b>Soplar fuego</b></td><td>Cono de 15 pies — golpea a todos los que estén dentro</td></tr>
+        <tr><td><b>Explosión cáustica</b></td><td>Ráfaga de 5 pies alrededor del punto de impacto</td></tr>
+        <tr><td><b>Detectar magia</b></td><td>Emanación de 30 pies (no es daño, es utilidad)</td></tr>
+        <tr><td><b>Arco eléctrico</b></td><td>No es área técnicamente, pero golpea hasta 2 objetivos a la vez si están cerca uno del otro</td></tr>
+      </table>
+      <table class="rows" style="margin-top:14px;">
+        <tr><th>Un solo objetivo</th><th>Detalle</th></tr>
+        <tr><td><b>Aliento venenoso</b></td><td>Un enemigo</td></tr>
+        <tr><td><b>Ignición</b></td><td>Un enemigo (tirada de ataque)</td></tr>
+        <tr><td><b>Enredadera</b></td><td>Un enemigo (tirada de ataque)</td></tr>
+        <tr><td><b>Bola de nieve</b></td><td>Un enemigo</td></tr>
+        <tr><td><b>Mordeduras zumbantes</b></td><td>Un enemigo</td></tr>
+        <tr><td><b>Invocar Verdadero Nombre</b></td><td>Un enemigo</td></tr>
+        <tr><td><b>Domesticar</b></td><td>Un animal</td></tr>
+        <tr><td><b>Marca</b></td><td>Un objeto o superficie</td></tr>
+      </table>
+      <table class="rows" style="margin-top:14px;">
+        <tr><th>Sobre ti / un aliado (no ofensivos)</th><th>Detalle</th></tr>
+        <tr><td><b>Guía</b></td><td>Tú o un aliado, antes de una tirada</td></tr>
+        <tr><td><b>Proteger compañero</b></td><td>Un aliado o minion cercano</td></tr>
+        <tr><td><b>Comer fuego</b></td><td>Solo tú (reacción)</td></tr>
+        <tr><td><b>Forma de peste</b></td><td>Solo tú (te transformas)</td></tr>
+        <tr><td><b>Fase familiar</b></td><td>Solo Sangre</td></tr>
+        <tr><td><b>Vínculo de Sombra</b></td><td>Tú o un aliado junto à Sangre</td></tr>
+      </table>
+      <p class="note">Los de área son tu mejor opción contra grupos de enemigos; los de un objetivo, contra amenazas puntuales o cuando no quieres arriesgar a tus aliados en el radio.</p>
+    </div>
+
     <div class="card">
       <h2>Trucos <span class="n">ilimitados · CD 18</span></h2>
       <table class="rows">
-        <tr><th>Truco</th><th>Acc.</th><th>Descripción</th></tr>
-        <tr><td>Arco eléctrico</td><td class="mod">2 acc.</td><td>Hasta 2 objetivos cercanos (2d4 eléctrico)</td></tr>
-        <tr><td>Ignición</td><td class="mod">2 acc.</td><td>Ataque de conjuro (+8) contra CA</td></tr>
+        <tr><th>Truco</th><th>Acc.</th><th>¿A cuántas personas afecta?</th><th>Cómo explicarlo en mesa</th></tr>
+        <tr><td>Explosión cáustica</td><td class="mod">2 acc.</td><td>Área (ráfaga de 5 pies)</td><td>Ráfaga de 5 pies, alcance 30. Todos dentro tiran Reflejos básico contra tu CD 18: 1d8 ácido; en crítico fallido deja 1 persistente.</td></tr>
+        <tr><td>Arco eléctrico</td><td class="mod">2 acc.</td><td>Hasta 2 objetivos</td><td>Alcance 30 pies, hasta 2 objetivos si están cerca uno del otro. 2d4 eléctrico con Reflejos básico contra tu CD 18 (salvación, no ataque).</td></tr>
+        <tr><td>Comer fuego</td><td class="mod">Reacción</td><td>Solo tú (+ nube 5 pies)</td><td>Primero te protege solo a ti (Resistencia 5 a fuego). Si luego "eructas" el humo, crea una nube de 5 pies que oculta a TODOS los que estén dentro, aliados y enemigos.</td></tr>
+        <tr><td>Aliento venenoso</td><td class="mod">2 acc.</td><td>1 persona</td><td>Exhalas veneno a la cara de un enemigo cercano. Fortaleza contra tu CD 18: 1d8 veneno + 2 persistente (mitad si acierta la salvación).</td></tr>
+        <tr><td>Ignición</td><td class="mod">2 acc.</td><td>1 persona</td><td>Alcance 30 pies. Tirada de ATAQUE tuya (+8) contra la CA del objetivo: 2d4 fuego si impacta, doble + 1d4 persistente en crítico.</td></tr>
+        <tr><td>Enredadera</td><td class="mod">2 acc.</td><td>1 persona</td><td>Tirada de ATAQUE tuya contra CA. Si impacta, una vid agarra al objetivo y penaliza su Velocidad.</td></tr>
+        <tr><td>Invocar Verdadero Nombre</td><td class="mod">1 acc.</td><td>1 persona</td><td>Debilita brevemente la mente de un objetivo diciendo algo verdadero sobre él/ella — confirma el efecto exacto con tu GM la primera vez.</td></tr>
+        <tr><td>Domesticar</td><td class="mod">2 acc.</td><td>1 animal</td><td>Calma a un animal hostil o asustadizo y lo hace más receptivo.</td></tr>
+        <tr><td>Marca</td><td class="mod">2 acc.</td><td>1 objeto</td><td>Dejas una marca invisible en un objeto o superficie que puedes detectar después.</td></tr>
+        <tr><td>Detectar magia</td><td class="mod">2 acc.</td><td>Área (30 pies de pulso)</td><td>Pulso de 30 pies alrededor tuyo: solo dice si HAY magia cerca, sin ubicación exacta. No es daño a nadie.</td></tr>
+        <tr><td>Proteger compañero</td><td class="mod">1 acc.</td><td>1 aliado (Sangre)</td><td>Pensado para Sangre: si tu familiar va a recibir daño, absorbes parte tú en su lugar.</td></tr>
       </table>
+      <p class="note">Ordenados de "afecta a más gente" a "solo una persona/cosa". Tienes 11 trucos en tu repertorio (subieron de 4 a 11 en nivel 2) — cada día eliges cuáles dejar listos. Ojo: la mayoría pide SALVACIÓN del enemigo contra tu CD 18, pero Ignición y Enredadera son tirada de ATAQUE tuya (+8) contra su CA — no confundir las dos mecánicas en mesa.</p>
     </div>
+
+    <div class="card">
+      <h2>Foco del patrón <span class="n">Bruja del Mosquito · 2 puntos/día</span></h2>
+      <table class="rows">
+        <tr><th>Conjuro</th><th>Acc.</th><th>Cómo explicarlo en mesa</th></tr>
+        <tr><td>Fase familiar <span class="n">(Phase Familiar)</span></td><td>Reacción</td><td>Cuando Sangre va a recibir un ataque, la vuelves fantasmal: gana Resistencia 5 a todo daño y ese ataque no puede beneficiarse de precisión (como flanqueo) contra ella.</td></tr>
+        <tr><td>Mordeduras zumbantes <span class="n">(Buzzing Bites)</span></td><td>1</td><td>Invocas insectos que muerden a un enemigo cercano: 1d4 perforante, y con salvación de Fortaleza fallida puede quedar enfermo.</td></tr>
+        <tr><td>Vínculo de Sombra <span class="n">(Shadow Link)</span></td><td>—</td><td>No se "lanza": es un efecto pasivo que se activa solo cuando lanzas un conjuro de Ocultismo — tú o un aliado junto à Sangre ganen la condición Oculto en ese momento.</td></tr>
+      </table>
+      <p class="note">El fondo de foco equivale a la cantidad de conjuros de foco que tienes (máx 3). Vínculo de Sombra es pasivo, no cuenta como conjuro propio — así que solo Fase familiar y Mordeduras zumbantes dan tus 2 puntos de foco. Recuerda: solo puedes lanzar UN embrujo (hex) por turno; si intentas dos, el segundo falla automáticamente.</p>
+    </div>
+
+    <div class="card">
+      <h2>Conjuros innatos</h2>
+      <table class="rows">
+        <tr><th>Conjuro</th><th>Acc.</th><th>Cómo explicarlo en mesa</th></tr>
+        <tr><td>Guía</td><td>1</td><td>Antes de una tirada de habilidad o salvación (tuya o de un aliado), das +1 de estado a esa tirada específica. Viene de tu trasfondo Bendecido, no cuenta como conjuro de Brujo.</td></tr>
+      </table>
+      <p class="note">No gasta espacio de conjuro ni punto de foco — es totalmente aparte. Pregunta a tu GM la frecuencia exacta (normalmente es limitada, no ilimitada).</p>
+    </div>
+
   </section>
 
   <!-- ===================== EQUIPO ===================== -->
   <section class="panel" id="equipo">
+
     <div class="card">
-      <h2>Objetos puestos y preparados</h2>
+      <h2>Objetos puestos</h2>
+      <table class="rows">
+        <tr><td><b>Túnica de Brujo</b></td><td>Invertido, sin penalización</td></tr>
+        <tr><td><b>Bastón</b></td><td>1 Bulk, arma cuerpo a cuerpo 1d6 contundente</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Objetos preparados</h2>
       <div class="pill-list">
-        <span>Túnica de Brujo</span>
-        <span>Bastón (1d6 P)</span>
+        <span>Kit de escalada (sin usos)</span>
         <span>Kit de salud (5 usos)</span>
+        <span>Galón de cerveza (1 uso)</span>
+        <span>Bigote falso</span>
+        <span>Sombrero mexicano</span>
         <span>Fuego alquímico menor</span>
+        <span>Vapor Vejante menor</span>
+      </div>
+      <p class="note">El fuego alquímico menor es tu único daño de respaldo si te quedas sin conjuros: 1d8 fuego + 1 persistente al impactar.</p>
+      <p class="note">Vapor Vejante menor (bomba, 4 po, Bulk L): al impactar hace 1d6 daño mental + 1 de salpicadura mental, y el objetivo debe pasar un tiro plano CD 5 antes de usar acciones con el rasgo concentración (dura hasta su próximo turno, 1 min en crítico). Rasgos: Alquímico, Bomba, Consumible, Inhalado, Mental, Veneno, Salpicadura.</p>
+    </div>
+
+    <div class="card">
+      <h2>Dinero</h2>
+      <div class="stat-grid">
+        <div class="stat"><div class="v">0</div><div class="l">PC</div></div>
+        <div class="stat"><div class="v">0</div><div class="l">PP</div></div>
+        <div class="stat rust"><div class="v">2</div><div class="l">PO</div></div>
+        <div class="stat"><div class="v">0</div><div class="l">PPT</div></div>
       </div>
     </div>
+
   </section>
 
   <!-- ===================== DOTES ===================== -->
   <section class="panel" id="dotes">
+
     <div class="card">
-      <h2>Herencia y Dotes</h2>
+      <h2>Herencia — Goblin Colilarga</h2>
       <table class="rows">
-        <tr><td><b>Goblin Colilarga</b></td><td>+2 de circunstancia a Atletismo para trepar y dote Trepador en Combate gratis.</td></tr>
-        <tr><td><b>Ocultar Conjuro</b></td><td>Permite lanzar magia ocultando runas y chispas visuales.</td></tr>
+        <tr><td>Este dato faltaba en la ficha: tu cola te da <b>+2 de circunstancia a Atletismo para trepar</b>, la dote <b>Trepador en Combate</b> gratis, y necesitas <b>una mano menos</b> para trepar o hacer una Zancadilla.</td></tr>
+        <tr><td>Gracias a Trepador en Combate: <b>no estás desprevenido mientras trepas</b> (normalmente cualquiera lo está al escalar) y puedes trepar con una mano ocupada, siempre que uses la otra mano y ambas piernas.</td></tr>
       </table>
     </div>
+
+    <div class="card">
+      <h2>Dote de Brujo — nivel 2</h2>
+      <table class="rows">
+        <tr><td><b>Ocultar Conjuro</b></td><td>1 acción, antes de lanzar tu siguiente conjuro. Ese conjuro gana el rasgo Sutil: oculta las runas brillantes, chispas y demás señales visuales de que estás lanzando magia (no oculta el efecto en sí, solo el hecho de que lo estás lanzando).</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Dote de habilidad — nivel 2</h2>
+      <table class="rows">
+        <tr><td><b>Acechador de Terreno (Escombros)</b></td><td>Mientras estés indetectado en terreno de escombros (perfecto para tus cloacas), puedes usar Sigilo para moverte hasta 5 pies sin tirar el dado, siempre que no te acerques a menos de 10 pies de un enemigo. También te deja acercarte automáticamente hasta 15 pies de una criatura durante exploración sin que te note.</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Dote de ascendencia</h2>
+      <table class="rows">
+        <tr><td><b>Muy Sigiloso</b></td><td>Cuando usas la acción Sigilo (Sneak), te puedes mover 5 pies más de lo normal (hasta tu Velocidad). Además, mientras sigas usando Sigilo y tus tiradas salgan bien, no te vuelves observado al final de esa acción aunque te falte cobertura — siempre que sí tengas cobertura o estés oculto al final de tu turno.</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Sobre el patrón — Bruja del Mosquito</h2>
+      <table class="rows">
+        <tr><td>Corrección: sí es oficial — es un patrón <b>raro</b> (fuente: Divine Mysteries). Es un ser misterioso al que le tienes afinidad con insectos, y que suele atraerlos a tu alrededor. Su lista de conjuros es de tradición <b>Naturaleza/Primigenia</b>, no Ocultismo.</td></tr>
+        <tr><td><b>Lección del Enjambre Desatado</b></td><td>Te da el truco de embrujo Mordeduras zumbantes, y tu familiar aprende Forma de peste automáticamente (por eso ya la tenías).</td></tr>
+        <tr><td><b>Familiar del Corazón del Enjambre</b></td><td>Habilidad de familiar que aún no tienes anotada: al lanzar o sostener un embrujo, una nube de insectos inofensivos rodea a Sangre y da Ocultación a ti o a un aliado que comparta su espacio hasta tu próximo turno.</td></tr>
+      </table>
+      <p class="note">Ya está agregada en la pestaña Sangre, en lugar de Olfato (dime si tu GM la cambió por otra en vez de esa).</p>
+    </div>
+
+    <div class="card">
+      <h2>Rasgos de clase (Brujo)</h2>
+      <table class="rows">
+        <tr><td><b>Lanzamiento de conjuros de Brujo</b></td><td>Tu base para preparar y lanzar conjuros. Con patrón Bruja del Mosquito, tu lista de conjuros es de tradición Primigenia (con Naturaleza como habilidad clave del patrón) — no Ocultismo. Sigues entrenada en Ocultismo aparte, como una de tus habilidades libres.</td></tr>
+        <tr><td><b>Visión en la oscuridad</b></td><td>Ves con normalidad en oscuridad total, sin necesidad de luz (heredado de tu ascendencia goblin).</td></tr>
+        <tr><td><b>Hechizos de embrujo — Fase familiar</b></td><td>El conjuro de foco fijo que te da tu patrón; ya está listado en la pestaña Conjuros.</td></tr>
+      </table>
+      <p class="note">Estas tres son rasgos de clase de nivel 1, no dotes elegidas — vienen automáticas por ser Brujo y Goblin. Las dotes de nivel 2 (Ocultar Conjuro y Acechador de Terreno) ya están arriba. Cuando tengas una dote general nueva más adelante (nivel 3), dime cuál y la agrego.</p>
+    </div>
+
   </section>
 
   <!-- ===================== SANGRE ===================== -->
   <section class="panel" id="sangre">
 
-    <!-- Contenedor en dos columnas: Foto izquierda, Texto derecha -->
+    <!-- Contenedor en dos columnas lado a lado: Foto a la izquierda, Texto a la derecha -->
     <div style="display: flex; gap: 16px; align-items: flex-start;">
       
       <!-- Columna Izquierda: Foto de Sangre -->
@@ -407,27 +660,27 @@
       <div class="flow-steps">
         <div class="step">
           <div class="num">1</div>
-          <div class="txt"><b>Gastas 1 acción de tu turno (Tú)</b> — Ordenas a Sangre que se mueva o actúe. Al tú gastar 1 acción, Sangre recibe 2 acciones propias para gastar.</div>
+          <div class="txt"><b>Gastas 1 acción de tu turno (Tú)</b> — Ordenas a Sangre que se mueva o actúe. Al tú gastar 1 acción, Sangre recibe 2 acciones propias para gastar (por ejemplo, moverse hasta 25 pies o investigar).</div>
         </div>
         <div class="step">
           <div class="num">2</div>
-          <div class="txt"><b>Destreza manual (Pasiva / Activa)</b> — Sangre utiliza dos de sus extremidades para sostener objetos ligeros, pociones o abrir puertas sencillas.</div>
+          <div class="txt"><b>Destreza manual (Pasiva / Activa de Sangre)</b> — Sangre utiliza dos de sus extremidades para sostener objetos ligeros, pociones o abrir puertas sencillas.</div>
         </div>
         <div class="step">
           <div class="num">3</div>
-          <div class="txt"><b>Corazón del Enjambre</b> — Al lanzar un embrujo, insectos rodean a Sangre y dan Ocultación a ti o a un aliado en su espacio.</div>
+          <div class="txt"><b>Familiar del Corazón del Enjambre (Activa de Sangre)</b> — Al lanzar o mantener un embrujo (hex), insectos rodean a Sangre y dan Ocultación a ti o a un aliado en su espacio hasta tu próximo turno.</div>
         </div>
         <div class="step">
           <div class="num">4</div>
-          <div class="txt"><b>Ataque de familiar</b> — Ordenas a Sangre atacar a un adyacente usando tu Ataque de Conjuro (+8); Sangre hace 1d4 de daño.</div>
+          <div class="txt"><b>Ataque de familiar (Gastas 1 acción de tu turno)</b> — Ordenas a Sangre atacar a un enemigo adyacente usando tu Tirada de Ataque de Conjuro (+8); Sangre hace 1d4 de daño.</div>
         </div>
         <div class="step">
           <div class="num">5</div>
-          <div class="txt"><b>Fase familiar (Reacción)</b> — La activas con tu Reacción cuando Sangre va a recibir un ataque: gana Resistencia 5 a todo daño.</div>
+          <div class="txt"><b>Fase familiar (Es una REACCIÓN tuya)</b> — No es una acción normal de movimiento. La activas con tu Reacción cuando Sangre va a recibir un ataque: Sangre se vuelve fantasmal, gana Resistencia 5 a todo daño y el ataque no se beneficia de precisión.</div>
         </div>
         <div class="step">
           <div class="num">6</div>
-          <div class="txt"><b>Vínculo de Sombra (Pasiva)</b> — Se activa sola al lanzar un conjuro de Ocultismo, dando Oculto a ti o a un aliado junto a Sangre.</div>
+          <div class="txt"><b>Vínculo de Sombra (Pasiva automática)</b> — No consume acciones; se activa sola en cuanto tú lanzas un conjuro de Ocultismo, haciendo que tú o un aliado junto à Sangre ganen la condición Oculto en ese instante.</div>
         </div>
       </div>
     </div>
@@ -442,20 +695,21 @@
       <img src="patron.jfif" alt="La Bruja del Mosquito" style="width: 100%; max-width: 1000px; height: auto; border-radius: var(--radius); border: 1px solid var(--line); display: block; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.7);">
     </div>
 
-    <!-- Información y Poderes Abajo -->
+    <!-- Información, Historia y Poderes Abajo -->
     <div class="card">
       <h2>La Bruja del Mosquito <span class="n">Madre de los Enjambres — Historia y Trasfondo</span></h2>
       <table class="rows">
-        <tr><td><b>Naturaleza del Patrón</b></td><td>Una entidad primigenia y misteriosa arraigada en los pantanos profundos, aguas estancadas y zonas olvidadas por la civilización. Reclama lo que se pudre y lo que se deja atrás.</td></tr>
-        <tr><td><b>Vínculo con Morisong</b></td><td>A través de la <i>Lección del Enjambre Desatado</i>, sintonizó con esta frecuencia caótica y natural, otorgándole magia de naturaleza y plagas.</td></tr>
+        <tr><td><b>Naturaleza del Patrón</b></td><td>Una entidad primigenia y misteriosa arraigada en los pantanos profundos, aguas estancadas y zonas olvidadas por la civilización. No busca imperios ni riquezas, sino reclamar lo que se pudre, lo que se deja atrás y los secretos que flotan en el aire húmedo. Su presencia siempre viene acompañada de zumbidos lejanos y enjambres protectores.</td></tr>
+        <tr><td><b>Vínculo con Morisong</b></td><td>A través de la <i>Lección del Enjambre Desatado</i>, Morisong sintonizó con esta frecuencia caótica y natural. Para un goblin de las cloacas, la ciénaga y los rincones oscuros son el hábitat perfecto; la Bruja vio en él un reflejo de esa resistencia sucia y tenaz, otorgándole magia de naturaleza y plagas.</td></tr>
       </table>
     </div>
 
     <div class="card">
       <h2>Poderes y Mecánicas del Patrón</h2>
       <table class="rows">
-        <tr><td><b>Tradición Mágica</b></td><td>Primigenia / Naturaleza (supervivencia, daño elemental y control de enjambres).</td></tr>
-        <tr><td><b>Conjuro de Foco Inicial</b></td><td><b>Mordeduras zumbantes:</b> Invocas un enjambre que muerde a un objetivo (1d4 perforante y prueba de Fortaleza o queda enfermo).</td></tr>
+        <tr><td><b>Tradición Mágica</b></td><td>Primigenia / Naturaleza (enfocada en supervivencia, daño elemental y control de enjambres).</td></tr>
+        <tr><td><b>Conjuro de Foco Inicial</b></td><td><b>Mordeduras zumbantes:</b> Invocas un enjambre instantáneo que muerde a un objetivo cercano (1d4 de daño perforante y el enemigo debe superar una salvación de Fortaleza o quedar enfermo).</td></tr>
+        <tr><td><b>Rasgo de Familiar Automático</b></td><td><b>Corazón del Enjambre:</b> Gracias a tu patrón, tu familiar (Sangre) activa una nube de insectos inofensivos cada vez que lanzas un embrujo (hex), otorgando la condición de <i>Oculto</i> a ti o a un aliado que comparta su espacio.</td></tr>
       </table>
     </div>
 
@@ -463,17 +717,47 @@
 
   <!-- ===================== ROL ===================== -->
   <section class="panel" id="rol">
+
     <div class="card">
-      <h2>Apariencia y Personalidad</h2>
-      <p class="note" style="margin:0;">Un goblin de piel verdosa, mirada marcada por el pasado y expresión de cautela. Viste túnica de brujo raída. Descarado, caótico y sin filtro moral.</p>
+      <h2>Apariencia</h2>
+      <p class="note" style="margin:0;">Un goblin de piel verdosa, mirada marcada por el pasado y una expresión de cautela constante. Viste una túnica de brujo raída y oscura. A su lado, ahora, va Sangre, su nuevo familiar escarabajo.</p>
     </div>
+
+    <div class="card">
+      <h2>Actitud</h2>
+      <table class="rows">
+        <tr><td>Descarado, caótico, desinhibido y sin filtro moral ni vergüenza. Le importa muy poco lo que piensen las buenas costumbres de la superficie.</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Creencias</h2>
+      <table class="rows">
+        <tr><td>El mundo es un chiste macabro, la cerveza lo cura todo, y la muerte es solo el comienzo de una relación interesante.</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Le gusta / Le disgusta</h2>
+      <table class="rows">
+        <tr><th>Le gusta</th><th>Le disgusta</th></tr>
+        <tr><td>Las gnomas, la cerveza de cualquier calidad, y una afinidad bizarra con los cadáveres</td><td>Los modales de la alta sociedad, la iglesia y los puritanos que juzgan sus gustos por los muertos</td></tr>
+      </table>
+    </div>
+
     <div class="card">
       <h2>Datos personales</h2>
       <table class="rows">
         <tr><td>Etnia</td><td>Goblin de las cloacas</td></tr>
         <tr><td>Nacionalidad</td><td>Habitante del subsuelo</td></tr>
+        <tr><td>Lugar de nacimiento</td><td>Aldea goblin oculta en la naturaleza</td></tr>
+        <tr><td>Edad / Sexo</td><td>18 años · Masculino</td></tr>
+        <tr><td>Altura / Peso</td><td>1.30 m · 20 kg</td></tr>
       </table>
     </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
   </section>
 
 </main>
