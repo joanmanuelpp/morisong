@@ -279,6 +279,14 @@
         <div class="stat"><div class="v">+3</div><div class="l">Bastón (1d6 P)</div></div>
       </div>
     </div>
+    <div class="card">
+      <h2>Dotes y Rasgos Útiles en Combate</h2>
+      <table class="rows">
+        <tr><td><b>Visión en la oscuridad</b></td><td>Ves con normalidad en oscuridad total, sin necesidad de luz.</td></tr>
+        <tr><td><b>Ocultar Conjuro</b></td><td>1 acción, antes de lanzar conjuro, oculta runas y chispas visuales.</td></tr>
+        <tr><td><b>Trepador en Combate</b></td><td>No estás desprevenido mientras trepas y puedes trepar con una mano ocupada.</td></tr>
+      </table>
+    </div>
   </section>
 
   <!-- ===================== FICHA ===================== -->
@@ -312,7 +320,7 @@
       <table class="rows">
         <tr><th>Habilidad</th><th>Mod</th><th>Uso principal</th></tr>
         <tr><td>Ocultismo</td><td class="mod">+8</td><td>CD de conjuros, identificar magia, tu patrón</td></tr>
-        <tr><td>Arcanos</td><td class="mod">+8</td><td>Recall Knowledge sobre magia y criaturas mágicas</td></tr>
+        <tr><td>Arcanos</td><td class="mod">+8</td><td>Recall Knowledge sobre magia y criaturas</td></tr>
         <tr><td>Sociedad</td><td class="mod">+8</td><td>Conocimiento urbano</td></tr>
         <tr><td>Intimidación</td><td class="mod">+7</td><td>Demoralize</td></tr>
         <tr><td>Sigilo</td><td class="mod">+6</td><td>Esconderte</td></tr>
@@ -356,13 +364,13 @@
     </div>
   </section>
 
-<!-- ===================== SANGRE ===================== -->
+  <!-- ===================== SANGRE ===================== -->
   <section class="panel" id="sangre">
 
-    <!-- Contenedor en dos columnas forzado lado a lado -->
+    <!-- Contenedor en dos columnas: Foto izquierda, Texto derecha -->
     <div style="display: flex; gap: 16px; align-items: flex-start;">
       
-      <!-- Columna Izquierda: Foto de Sangre (ancho fijo optimizado) -->
+      <!-- Columna Izquierda: Foto de Sangre -->
       <div style="flex: 0 0 210px; text-align: center;">
         <div class="card" style="padding: 8px; margin-bottom: 0;">
           <img src="sangre.jfif" alt="Sangre - Familiar de Morisong" style="width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.6);">
@@ -399,27 +407,27 @@
       <div class="flow-steps">
         <div class="step">
           <div class="num">1</div>
-          <div class="txt"><b>Gastas 1 acción de tu turno (Tú)</b> — Ordenas a Sangre que se mueva o actúe. Al tú gastar 1 acción, Sangre recibe 2 acciones propias para gastar (por ejemplo, moverse hasta 25 pies o investigar).</div>
+          <div class="txt"><b>Gastas 1 acción de tu turno (Tú)</b> — Ordenas a Sangre que se mueva o actúe. Al tú gastar 1 acción, Sangre recibe 2 acciones propias para gastar.</div>
         </div>
         <div class="step">
           <div class="num">2</div>
-          <div class="txt"><b>Destreza manual (Pasiva / Activa de Sangre)</b> — Sangre utiliza dos de sus extremidades para sostener objetos ligeros, pociones o abrir puertas sencillas.</div>
+          <div class="txt"><b>Destreza manual (Pasiva / Activa)</b> — Sangre utiliza dos de sus extremidades para sostener objetos ligeros, pociones o abrir puertas sencillas.</div>
         </div>
         <div class="step">
           <div class="num">3</div>
-          <div class="txt"><b>Familiar del Corazón del Enjambre (Activa de Sangre)</b> — Al lanzar o mantener un embrujo (hex), insectos rodean a Sangre y dan Ocultación a ti o a un aliado en su espacio hasta tu próximo turno.</div>
+          <div class="txt"><b>Corazón del Enjambre</b> — Al lanzar un embrujo, insectos rodean a Sangre y dan Ocultación a ti o a un aliado en su espacio.</div>
         </div>
         <div class="step">
           <div class="num">4</div>
-          <div class="txt"><b>Ataque de familiar (Gastas 1 acción de tu turno)</b> — Ordenas a Sangre atacar a un enemigo adyacente usando tu Tirada de Ataque de Conjuro (+8); Sangre hace 1d4 de daño.</div>
+          <div class="txt"><b>Ataque de familiar</b> — Ordenas a Sangre atacar a un adyacente usando tu Ataque de Conjuro (+8); Sangre hace 1d4 de daño.</div>
         </div>
         <div class="step">
           <div class="num">5</div>
-          <div class="txt"><b>Fase familiar (Es una REACCIÓN tuya)</b> — No es una acción normal de movimiento. La activas con tu Reacción cuando Sangre va a recibir un ataque: Sangre se vuelve fantasmal, gana Resistencia 5 a todo daño y el ataque no se beneficia de precisión.</div>
+          <div class="txt"><b>Fase familiar (Reacción)</b> — La activas con tu Reacción cuando Sangre va a recibir un ataque: gana Resistencia 5 a todo daño.</div>
         </div>
         <div class="step">
           <div class="num">6</div>
-          <div class="txt"><b>Vínculo de Sombra (Pasiva automática)</b> — No consume acciones; se activa sola en cuanto tú lanzas un conjuro de Ocultismo, haciendo que tú o un aliado junto à Sangre ganen la condición Oculto en ese instante.</div>
+          <div class="txt"><b>Vínculo de Sombra (Pasiva)</b> — Se activa sola al lanzar un conjuro de Ocultismo, dando Oculto a ti o a un aliado junto a Sangre.</div>
         </div>
       </div>
     </div>
@@ -434,21 +442,20 @@
       <img src="patron.jfif" alt="La Bruja del Mosquito" style="width: 100%; max-width: 1000px; height: auto; border-radius: var(--radius); border: 1px solid var(--line); display: block; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.7);">
     </div>
 
-    <!-- Información, Historia y Poderes Abajo -->
+    <!-- Información y Poderes Abajo -->
     <div class="card">
       <h2>La Bruja del Mosquito <span class="n">Madre de los Enjambres — Historia y Trasfondo</span></h2>
       <table class="rows">
-        <tr><td><b>Naturaleza del Patrón</b></td><td>Una entidad primigenia y misteriosa arraigada en los pantanos profundos, aguas estancadas y zonas olvidadas por la civilización. No busca imperios ni riquezas, sino reclamar lo que se pudre, lo que se deja atrás y los secretos que flotan en el aire húmedo. Su presencia siempre viene acompañada de zumbidos lejanos y enjambres protectores.</td></tr>
-        <tr><td><b>Vínculo con Morisong</b></td><td>A través de la <i>Lección del Enjambre Desatado</i>, Morisong sintonizó con esta frecuencia caótica y natural. Para un goblin de las cloacas, la ciénaga y los rincones oscuros son el hábitat perfecto; la Bruja vio en él un reflejo de esa resistencia sucia y tenaz, otorgándole magia de naturaleza y plagas.</td></tr>
+        <tr><td><b>Naturaleza del Patrón</b></td><td>Una entidad primigenia y misteriosa arraigada en los pantanos profundos, aguas estancadas y zonas olvidadas por la civilización. Reclama lo que se pudre y lo que se deja atrás.</td></tr>
+        <tr><td><b>Vínculo con Morisong</b></td><td>A través de la <i>Lección del Enjambre Desatado</i>, sintonizó con esta frecuencia caótica y natural, otorgándole magia de naturaleza y plagas.</td></tr>
       </table>
     </div>
 
     <div class="card">
       <h2>Poderes y Mecánicas del Patrón</h2>
       <table class="rows">
-        <tr><td><b>Tradición Mágica</b></td><td>Primigenia / Naturaleza (enfocada en supervivencia, daño elemental y control de enjambres).</td></tr>
-        <tr><td><b>Conjuro de Foco Inicial</b></td><td><b>Mordeduras zumbantes:</b> Invocas un enjambre instantáneo que muerde a un objetivo cercano (1d4 de daño perforante y el enemigo debe superar una salvación de Fortaleza o quedar enfermo).</td></tr>
-        <tr><td><b>Rasgo de Familiar Automático</b></td><td><b>Corazón del Enjambre:</b> Gracias a tu patrón, tu familiar (Sangre) activa una nube de insectos inofensivos cada vez que lanzas un embrujo (hex), otorgando la condición de <i>Oculto</i> a ti o a un aliado que comparta su espacio.</td></tr>
+        <tr><td><b>Tradición Mágica</b></td><td>Primigenia / Naturaleza (supervivencia, daño elemental y control de enjambres).</td></tr>
+        <tr><td><b>Conjuro de Foco Inicial</b></td><td><b>Mordeduras zumbantes:</b> Invocas un enjambre que muerde a un objetivo (1d4 perforante y prueba de Fortaleza o queda enfermo).</td></tr>
       </table>
     </div>
 
@@ -458,7 +465,7 @@
   <section class="panel" id="rol">
     <div class="card">
       <h2>Apariencia y Personalidad</h2>
-      <p class="note" style="margin:0;">Un goblin de piel verdosa, mirada marcada por el pasado y una expresión de cautela constante. Viste una túnica de brujo raída y oscura. Descarado, caótico, desinhibido y sin filtro moral.</p>
+      <p class="note" style="margin:0;">Un goblin de piel verdosa, mirada marcada por el pasado y expresión de cautela. Viste túnica de brujo raída. Descarado, caótico y sin filtro moral.</p>
     </div>
     <div class="card">
       <h2>Datos personales</h2>
