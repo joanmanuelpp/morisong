@@ -648,33 +648,43 @@
 
   </section>
 
-  <!-- ===================== FAMILIAR ===================== -->
-  <section class="panel" id="familiar">
+ <!-- ===================== SANGRE ===================== -->
+  <section class="panel" id="sangre">
 
-    <div class="card">
-      <h2>Sangre <span class="n">familiar — escarabajo (guía de acciones)</span></h2>
-      <p class="note" style="border-color:var(--rust); margin:0 0 12px;">Sombra cayó en el combate anterior. Tu patrón te concedió un nuevo familiar: Sangre, un escarabajo, con las mismas habilidades que tenía Sombra. 1 de tus acciones = 2 acciones de Sangre. <b>Nota importante:</b> Sangre no es un lanzador de conjuros; no prepara ni lanza hechizos por sí misma.</p>
-      <div class="stat-grid">
-        <div class="stat"><div class="v">17</div><div class="l">CA</div></div>
-        <div class="stat"><div class="v">10</div><div class="l">HP</div></div>
-        <div class="stat"><div class="v">+6</div><div class="l">Percepción</div></div>
-        <div class="stat"><div class="v">+4</div><div class="l">Fortaleza</div></div>
-        <div class="stat"><div class="v">+6</div><div class="l">Reflejos</div></div>
-        <div class="stat"><div class="v">+6</div><div class="l">Voluntad</div></div>
-        <div class="stat"><div class="v">25</div><div class="l">Velocidad (pies)</div></div>
-        <div class="stat"><div class="v">+6</div><div class="l">Acrobacias</div></div>
-        <div class="stat"><div class="v">+6</div><div class="l">Sigilo</div></div>
+    <!-- Contenedor en dos columnas para pantallas grandes y adaptable a móviles -->
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+      
+      <!-- Columna Izquierda: Elementos, estadísticas y poderes -->
+      <div style="flex: 1 1 500px;">
+        <div class="card" style="margin-bottom: 16px;">
+          <h2>Sangre <span class="n">Familiar / Jaguar Zombi & Escarabajo</span></h2>
+          <table class="rows">
+            <tr><td><b>Naturaleza</b></td><td>Familiar mejorado de la Bruja (Zombi jaguar & escarabajo). Vinculado al Patrón de la Bruja del Mosquito.</td></tr>
+            <tr><td><b>Habilidades Clave</b></td><td>Percepción aguda, sigilo en la oscuridad y resistencia antinatural.</td></tr>
+            <tr><td><b>Rasgo Pasivo</b></td><td><b>Corazón del Enjambre:</b> Al lanzar un embrujo, genera una nube que otorga Ocultamiento.</td></tr>
+          </table>
+        </div>
+
+        <div class="card">
+          <h2>Habilidades y Reacciones de Sangre</h2>
+          <table class="rows">
+            <tr><td><b>Fase Familiar (Reacción)</b></td><td>Cuando Sangre va a recibir daño, se vuelve fantasmal: gana Resistencia 5 a todo el daño y anula bonificadores de precisión del atacante.</td></tr>
+            <tr><td><b>Forma de Peste</b></td><td>Capacidad especial del familiar para desatar zumbidos y plagas menores en combate.</td></tr>
+          </table>
+        </div>
       </div>
-      <p class="note">Rasgos: Diminuto, Sirviente, Familiar · Visión en penumbra · Todas las demás habilidades +2 · FUE/DES/CON/INT/SAB/CAR +0 · Sin armadura. Por regla, el familiar de un Brujo comparte tu propia CA y tus propias salvaciones (por eso CA 17, igual que la tuya) — la CA de 13 que traía el PDF era un arrastre del error de armadura que ya corregimos antes. HP (5 por nivel = 10) y las demás habilidades sí son fijas para cualquier familiar a tu nivel.</p>
-      <div class="flow-steps">
-        <div class="step"><div class="num">1</div><div class="txt"><b>Gastas 1 acción de tu turno (Tú)</b> — Ordenas a Sangre que se mueva o actúe. Al tú gastar 1 acción, Sangre recibe 2 acciones propias para gastar (por ejemplo, moverse hasta 25 pies o investigar).</div></div>
-        <div class="step"><div class="num">2</div><div class="txt"><b>Destreza manual</b> — Permite que Sangre utilice dos de sus extremidades para sostener objetos ligeros, pociones o abrir puertas sencillas.</div></div>
-        <div class="step"><div class="num">3</div><div class="txt"><b>Familiar del Corazón del Enjambre</b> — Al lanzar o mantener un embrujo (hex), insectos inofensivos rodean a Sangre y dan Ocultación a ti o a un aliado que comparta su espacio, hasta tu próximo turno. <i>(reemplazó a Olfato — confirma con tu GM si es la que se cambió)</i></div></div>
-        <div class="step"><div class="num">4</div><div class="txt"><b>Ataque de familiar (Gastas 1 acción de tu turno)</b> — Gastas 1 acción de tu turno para ordenarle atacar a un adyacente (usas tu Tirada de Ataque de Conjuro +8); hace 1d4 de daño.</div></div>
-        <div class="step"><div class="num">5</div><div class="txt"><b>Fase familiar (Es una REACCIÓN tuya)</b> — No es una acción normal de movimiento. La usas con tu Reacción cuando Sangre va a recibir un ataque: tu patrón la vuelve temporalmente fantasmal (Resistencia 5 a todo daño y el ataque no se beneficia de precisión).</div></div>
-        <div class="step"><div class="num">6</div><div class="txt"><b>Vínculo de Sombra (Pasivo)</b> — No se lanza activamente; se activa solo cuando lanzas un conjuro de Ocultismo, haciendo que tú o un aliado junto à Sangre ganen la condición Oculto en ese momento.</div></div>
+
+      <!-- Columna Derecha: Foto gráfica de Sangre -->
+      <div style="flex: 1 1 350px; text-align: center;">
+        <div class="card" style="padding: 10px;">
+          <img src="sangre.jfif" alt="Sangre - Familiar de Morisong" style="width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.6);">
+          <p style="margin-top: 8px; font-size: 0.9rem; color: var(--muted);"><i>Sangre (Sombra / Escarabajo)</i></p>
+        </div>
       </div>
+
     </div>
+
+  </section>
 
   </section>
 
