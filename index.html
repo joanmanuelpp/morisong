@@ -36,41 +36,49 @@
   h1,h2,.display{ font-family:'Vidaloka', serif; }
 
   header{
-    padding:30px 20px 22px;
-    text-align:center;
+    padding:24px 20px;
     border-bottom:2px solid var(--moss);
     background:linear-gradient(180deg, var(--sewer) 0%, var(--sewer-deep) 100%);
-    position:relative;
+  }
+  .header-container{
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
   .header-avatar{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    border-radius: var(--radius);
     object-fit: cover;
-    border: 3px solid var(--moss-bright);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.8);
-    margin: 0 auto 16px auto;
-    display: block;
+    border: 2px solid var(--moss-bright);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+    flex: 0 0 140px;
+  }
+  .header-text{
+    flex: 1;
+    min-width: 0;
+    text-align: left;
   }
   h1{
     margin:0;
-    font-size:clamp(1.9rem, 7vw, 2.5rem);
+    font-size:clamp(1.8rem, 5vw, 2.3rem);
     color:var(--bone);
     text-shadow:0 2px 10px rgba(0,0,0,0.5);
   }
   .subtitle{
-    margin:10px 0 0;
-    font-size:0.92rem;
+    margin:6px 0 0;
+    font-size:0.88rem;
     color:var(--bone-dim);
   }
   .subtitle b{color:var(--moss-bright); font-weight:700;}
   .quote{
-    max-width:520px;
-    margin:14px auto 0;
-    font-size:0.85rem;
+    margin:8px 0 0;
+    font-size:0.82rem;
     font-style:italic;
     color:var(--rust-bright);
-    line-height:1.5;
+    line-height:1.4;
   }
 
   nav.tabs{
@@ -255,11 +263,16 @@
 <body>
 
 <header>
-  <!-- Foto de Morisong ampliada -->
-  <img src="morisong.jfif" alt="Morisong" class="header-avatar">
-  <h1>Morisong</h1>
-  <p class="subtitle">Brujo <b>nivel 2</b> · Goblin Colilarga · Bagaje Bendecido · Patrón: Bruja del Mosquito · Familiar: Sangre</p>
-  <p class="quote">"¿Un trago, una gnoma o un cadáver calentito? No me hagas elegir, ¡tengo dos manos!"</p>
+  <div class="header-container">
+    <!-- Foto cuadrada a la izquierda -->
+    <img src="morisong.jfif" alt="Morisong" class="header-avatar">
+    <!-- Texto a la derecha -->
+    <div class="header-text">
+      <h1>Morisong</h1>
+      <p class="subtitle">Brujo <b>nivel 2</b> · Goblin Colilarga · Bagaje Bendecido · Patrón: Bruja del Mosquito · Familiar: Sangre</p>
+      <p class="quote">"¿Un trago, una gnoma o un cadáver calentito? No me hagas elegir, ¡tengo dos manos!"</p>
+    </div>
+  </div>
 </header>
 
 <nav class="tabs" id="tabs">
@@ -613,7 +626,7 @@
     <div class="card">
       <h2>Rasgos de clase (Brujo)</h2>
       <table class="rows">
-        <tr><td><b>Lanzamiento de conjuros de Brujo</b></td><td>Tu base para preparar y lanzar conjuros. Con patrón Bruja del Mosquito, tu lista de conjuros es de tradición Primigenia (con Naturaleza como habilidad clave del patrón) — no Ocultismo. Sigues entrenada en Ocultismo aparte, como una de tu habilidades libres.</td></tr>
+        <tr><td><b>Lanzamiento de conjuros de Brujo</b></td><td>Tu base para preparar y lanzar conjuros. Con patrón Bruja del Mosquito, tu lista de conjuros es de tradición Primigenia (con Naturaleza como habilidad clave del patrón) — no Ocultismo. Sigues entrenada en Ocultismo aparte, como una de tus habilidades libres.</td></tr>
         <tr><td><b>Visión en la oscuridad</b></td><td>Ves con normalidad en oscuridad total, sin necesidad de luz (heredado de tu ascendencia goblin).</td></tr>
         <tr><td><b>Hechizos de embrujo — Fase familiar</b></td><td>El conjuro de foco fijo que te da tu patrón; ya está listado en la pestaña Conjuros.</td></tr>
       </table>
